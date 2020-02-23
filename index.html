@@ -67,7 +67,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
   </style></head><body><div class="content"><h1>Phase Plot and Phase Portrait</h1><!--introduction--><p>Using Simulink&reg; and MATLAB&reg;</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">ODE</a></li><li><a href="#2">Simulink Model</a></li><li><a href="#3">Defining the state equation</a></li><li><a href="#4">Phase plane</a></li><li><a href="#5">Calculating gradient and plotting the vector field</a></li><li><a href="#6">Check for different initial conditions</a></li></ul></div><h2>ODE<a name="1"></a></h2><pre class="codeinput">imshow(<span class="string">'VDP.png'</span>)
-</pre><img vspace="5" hspace="5" src="van_der_pol_01.png" alt=""> <h2>Simulink Model<a name="2"></a></h2><pre class="codeinput">close
+</pre><img vspace="5" hspace="5" src="https://raw.githubusercontent.com/pranabendra/pranabendra.github.io/master/assets/pictures/phase-plots/van_der_pol_01.png" alt=""> <h2>Simulink Model<a name="2"></a></h2><pre class="codeinput">close
 <span class="comment">% Assuming initial condition = (1,0)</span>
 open_system(<span class="string">'van_der_pol_model'</span>)
 fprintf(<span class="string">'\n'</span>)
@@ -76,7 +76,7 @@ xlim([-3 3])
 xlabel(<span class="string">'x_1'</span>)
 ylabel(<span class="string">'x_2'</span>)
 </pre><pre class="codeoutput">
-</pre><img vspace="5" hspace="5" src="van_der_pol_02.png" alt=""> <br><img vspace="5" hspace="5" src="van_der_pol_03.png" alt=""> <h2>Defining the state equation<a name="3"></a></h2><pre class="codeinput">f = @(t,X) [X(2); X(2)*(1 - X(1)^2) - X(1)];
+</pre><img vspace="5" hspace="5" src="https://raw.githubusercontent.com/pranabendra/pranabendra.github.io/master/assets/pictures/phase-plots/van_der_pol_02.png" alt=""> <br><img vspace="5" hspace="5" src="https://raw.githubusercontent.com/pranabendra/pranabendra.github.io/master/assets/pictures/phase-plots/van_der_pol_03.png" alt=""> <h2>Defining the state equation<a name="3"></a></h2><pre class="codeinput">f = @(t,X) [X(2); X(2)*(1 - X(1)^2) - X(1)];
 </pre><h2>Phase plane<a name="4"></a></h2><pre class="codeinput">x1 = linspace(-5,5,20);
 x2 = linspace(-5,5,20);
 [x,y] = meshgrid(x1,x2);
@@ -95,7 +95,7 @@ xlabel(<span class="string">'x_1'</span>)
 ylabel(<span class="string">'x_2'</span>)
 axis <span class="string">tight</span> <span class="string">equal</span>;
 hold <span class="string">on</span>;
-</pre><img vspace="5" hspace="5" src="van_der_pol_04.png" alt=""> <h2>Check for different initial conditions<a name="6"></a></h2><pre class="codeinput"><span class="keyword">for</span> y20 = -4:2:4
+</pre><img vspace="5" hspace="5" src="https://raw.githubusercontent.com/pranabendra/pranabendra.github.io/master/assets/pictures/phase-plots/van_der_pol_04.png" alt=""> <h2>Check for different initial conditions<a name="6"></a></h2><pre class="codeinput"><span class="keyword">for</span> y20 = -4:2:4
     [ts,ys] = ode45(f,[0,20],[0;y20]);
     plot(ys(:,1),ys(:,2))
     plot(ys(1,1),ys(1,2),<span class="string">'x'</span>)
@@ -107,7 +107,7 @@ hold <span class="string">on</span>;
     plot(ys(1,1),ys(1,2),<span class="string">'x'</span>)
 <span class="keyword">end</span>
 hold <span class="string">off</span>
-</pre><img vspace="5" hspace="5" src="van_der_pol_05.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="https://raw.githubusercontent.com/pranabendra/pranabendra.github.io/master/assets/pictures/phase-plots/van_der_pol_05.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Phase Plot and Phase Portrait 
 % Using Simulink(R) and MATLAB(R)
