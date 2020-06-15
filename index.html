@@ -26,20 +26,20 @@
       <div class="col-lg-8">
         <div style="text-align: center; margin-top: 150px; font-size: 24px;">
 
-          <img src="assets/pictures/seedling.png" width="200" height="200">
+          <img src="assets/pictures/seedling.png" width="150" height="150">
           <!-- <h1 style="margin-top: 25px;">Pranabendra Prasad Chandra</h1>
           <h4>Student, Electrical Engineering, Jadavpur University | Summer Analyst at Goldman Sachs</h4> -->
       
           <br \>
-          <div id="hello">
-            <!-- <h1 style="margin-top: 25px;">Hi,^ I am Pranabendra...</h1>
-            <h1 style="margin-top: 25px;">Thank you for stopping by!</h1> -->
-          </div>
-          <span id="typed" style="font-size: 24px;"></span>
+          <!-- <div id="hello">
+            <h1 style="margin-top: 25px;">Hi,^ I am Pranabendra...</h1>
+            <h1 style="margin-top: 25px;">Thank you for stopping by!</h1>
+          </div> -->
+          <span id="typed" style="font-size: 20px;"></span>
           <br \>
-          <span id="typed1" style="font-size: 24px;"></span>
+          <span id="typed1" style="font-size: 20px;"></span>
           <br \>
-          <span id="typed2" style="font-size: 24px;"></span>
+          <span id="typed2" style="font-size: 20px;"></span>
         </div>
       </div>
       <div class="col-lg-2"></div>
@@ -89,33 +89,37 @@
 
   <script>
     $(document).ready(function () {
-      $(".typed-cursor").css("font-size", "24px");
+      $(".typed-cursor").css("font-size", "20px");
     })
 
     var typed = new Typed('#typed', {
-      strings: ['Hi, ^1000\n I am Pranabendra ^2000\n',],
+      strings: ['Hi, ^1000\n I am Pranabendra^2000\n',],
       startDelay: 1000,
       backSpeed: 40,
       typeSpeed: 40,
+      cursorChar: '_',
       onComplete: function (self) { self.cursor.remove(); typeSecondLine(); },
     });
 
     function typeSecondLine() {
       var typed1 = new Typed('#typed1', {
-        strings: ['Thank you for stopping by! ^2000\n'],
+        strings: ['Thank you for stopping by!^2000\n'],
         startDelay: 500,
         backSpeed: 40,
         typeSpeed: 40,
+        cursorChar: '_',
         onComplete: function (self) { self.cursor.remove(); typeThirdLine() },
       });
     }
 
     function typeThirdLine() {
       var typed2 = new Typed('#typed2', {
-        strings: ['Welcome to my log  ^5000\n'],
+        strings: ['Welcome to my blog^1000\n', 'Welcome to my ^1000\n <i>presence<i>.^5000\n'],
         startDelay: 500,
         backSpeed: 40,
         typeSpeed: 40,
+        smartBackspace: true,
+        cursorChar: '_',
         onComplete: function (self) { self.cursor.remove(); },
       });
     }
