@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Homepage of Pranabendra Prasad Chandra">
+    <!-- <meta property="og:description" content="Student, Electrical Engineering Department, Jadavpur University"> -->
+    <meta name="author" content="Pranabendra Prasad Chandra">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+
+            <br \>
+            <br \>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+                <li>
+                    <a href="#">Education</a>
+                </li>
+                <li>
+                    <a href="#">Technical Skills</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Publications</a>
+                </li>
+                <li>
+                    <a href="#">Workshops</a>
+                </li>
+                <li>
+                    <a href="#">Achievements</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <div>
+                    Let's play a game &#128516; <br \>
+                    I thought of a number. 
+                    Take a guess? &#128512; <br \>
+
+                    <br \>
+                    <input type="text" id="myNumber" value="" placeholder="Enter a number (1-10)" aria-label="Enter a number (1-10)" style="width: 100%;"> <br \>
+
+                </div>
+
+                <li>
+                    <br \>
+                    <button type="button" id="submitNumber" class="btn btn-info" onclick="checkNumber()">Check my guess</button>
+                    <br \>
+                    <br \>
+                </li>
+
+                <li id="solution" class="solution-style">
+
+                </li>
+
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article" id="article1">Home</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fa fa-bars"></i>
+                        <span>About</span>
+                    </button>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- <i class="fas fa-align-justify"></i> -->
+                        PPC
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="photography">Photography</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="resume">Resume</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+            <!--Actual Content-->
+            <div id="content-information">
+                
+                <h2>Achievements</h2>
+                <br \>
+
+                <div>
+                    <h3>Scholastic Achievements</h3>
+                    <ul>
+                        <li>
+                            <b>Kishore Vaigyanik Protsahan Yojana (2014)</b> [<a href="http://www.kvpy.iisc.ernet.in/" target="_none">KVPY</a>]
+                            <br \>  
+                            All India Rank - 303.
+                            Awarded by Indian Institute of Science. [<a href="http://www.kvpy.iisc.ernet.in/" target="_none">IISc</a>]
+                        </li>
+                        <br \>
+                        <li>
+                            <b>Honor Badge (2014)</b>
+                            <br \>
+                            Awarded by DPS Ruby Park, Kolkata.
+                        </li>
+                        <br \>
+                        <li>
+                            <b>DPS SMTE (2012)</b>
+                            <br \>
+                            The DPS SMTE (DPS Science and Mathematics Talent Examination) is conducted by the Delhi Public School Society for students of class 9, studying in any of the branches of DPS all over the world. [<a href="http://www.dpsmisdoha.com/DPSDoha/UserSpace/UserName/NASIK/DynamicFolder/News_2012_2013/DPS%202ND%20LEVEL%20RANK%20WISE%20RESULT%20%282012-13%29.htm" style="text-decoration: none;" target="_none">Result</a>]
+                        </li>
+                        <br \>
+                    </ul>
+                    <h3>Extracurricular Achievements</h3>
+                    <ul>
+                        <li>
+                            <b>1st in Tech Hunt, Convolution (2020)</b> [<a href="https://www.facebook.com/convolution.juee/" style="text-decoration: none;" target="_none">Convolution</a>]
+                            <br \>
+                            Champion in Tech Hunt event of Convolution 2020, the annual technical fest of Department of Electrical Engineering, Jadavpur University.  <br \>
+                            Tech Hunt is a circuit and logic-based competition to decode them using the knowledge of functioning of electronic circuits.  [Photographs]
+                        </li>
+                        <br \>
+                        <li>
+                            <b>1st in Technical Debate, IET Kolkata SVC 2018</b>
+                            <br \>
+                            Champion in Technical Debate in Students' Volunteering Conference (SVC) 2018, organised by <a href="https://india.theiet.org/get-involved/local-networks/kolkata-local-network/" style="text-decoration: none;" target="_none">IET Kolkata Local Network</a>.
+                        </li>
+                        <br \>
+                        <li>
+                            <b>1st in Circuistics, Convolution (2018)</b> [<a href="https://www.facebook.com/convolution.juee/" style="text-decoration: none;" target="_none">Convolution</a>]
+                            <br \>
+                            Champion in Circuistics event of Convolution 2018, the annual technical fest of Department of Electrical Engineering, Jadavpur University.  <br \>
+                            Circuistics is the circuit designing event of Convolution. [Photographs]
+                        </li>
+                        <br \>
+                        <li>
+                            <b>1st in Wired-In, Instruo (2017)</b> [<a href="https://www.facebook.com/instruo.iiests" style="text-decoration: none;" target="_none">Instruo</a>]
+                            <br \>
+                            Champion in Wired-In event of Instruo 2017, the annual technical fest of Indian Institute of Engineering Science and Technology, Shibpur. <br \>
+                            Wired-In is an event dedicated to solving problems pertaining to Electrical Engineering. [<a href="https://www.facebook.com/instruo.iiests/posts/1469840716439650" style="text-decoration: none;" target="_none">Link</a>]
+                        </li>
+                        <br \>
+                        <li>
+                            <b>1st in Poster Presentation at IET On-Campus Fest (2017)</b>
+                            <br \>
+                            Designed and presented a poster on the topic "Ganga Rejuvenation" at IET On-Campus Fest 2017 conducted by <a href="https://india.theiet.org/get-involved/local-networks/kolkata-local-network/" style="text-decoration: none;" target="_none">IET Kolkata Local Network</a>, held at Electrical Engineering Department, Jadavpur University. [Poster] 
+                        </li>
+                        <br \>
+                        <li>
+                            <b>1st in Innovision, Jontro Tontro (2017)</b>
+                            <br \>
+                            Champion in Innovision event of Jontro Tontro, the annual robotics fest organized by <a href="https://www.jusc.in/" style="text-decoration: none;" target="_none">Jadavpur University Science Club</a>.
+                        </li>
+                        <br \>
+                        <li>
+                            2nd in <b><a href="https://bitm.gov.in/annual-science-quiz-contest/" style="text-decoration: none;" target="_none">Annual Science Quiz Contest</a></b> conducted by <a href="https://bitm.gov.in/" style="text-decoration: none;" target="_none">BITM</a> Kolkata (2014) 
+                            <br \>
+                            Represented DPS Ruby Park as a team of three, in the senior category. [Photographs]<br \>
+                        </li>
+                        <br \>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                // $('#content-information').css('padding-left', '260px');
+                $("a.article").toggle();
+            });
+        });
+
+        var mybutton = document.getElementById("myBtn");
+        var articleButton = document.getElementById("article1");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                articleButton.style.display = "block";
+                mybutton.style.display = "block";
+            } else {
+                articleButton.style.display = "none";
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function checkNumber() {
+            var x = document.getElementById("myNumber").value;
+            var y = Math.floor((Math.random() * 10) + 1);
+
+            if (x == y) {
+                document.getElementById("solution").innerHTML = "Correct! 😁";
+            }
+            else if (x != y) {
+                if (x > 0 && x <= 10) {
+                    document.getElementById("solution").innerHTML = "Try once more 😅";
+                }
+                else {
+                    document.getElementById("solution").innerHTML = "Enter correctly...";
+                }
+            }
+
+            
+        }
+    </script>
+
+<footer class="footer">
+    <div class="container"
+        style="height: 72px; position: relative; bottom: 0; width: 100%; text-align: center; min-width: 100%; background-color: #343a40; padding-top: 10px;">
+        <a href="mailto:pranabendrachandra@gmail.com" title="Mail" class="fa fa-envelope-o fa-lg"
+            style="text-decoration: none;"></a>
+        <a href="https://www.github.com/pranabendra" title="Github" class="fa fa-github fa-lg"
+            style="text-decoration: none;"></a>
+        <a href="https://in.linkedin.com/in/pranabendra-prasad-chandra-20794a12b" title="LinkedIn"
+            class="fa fa-linkedin fa-lg" style="text-decoration: none;"></a>
+        <a href="https://www.instagram.com/pranab_ppc" title="Instagram" class="fa fa-instagram fa-lg"
+            style="text-decoration: none;"></a>
+        <a href="https://www.facebook.com/ppc.pranab" title="Facebook" class="fa fa-facebook fa-lg"
+            style="text-decoration: none;"></a>
+        <a href="#" title="Twitter" class="fa fa-twitter fa-lg" style="text-decoration: none;"></a>
+        <a href="https://500px.com/pranabendrachandra" title="500px" class="fa fa-500px fa-lg"
+            style="text-decoration: none;"></a>
+        <a href="https://www.youtube.com/channel/UC3a-ZFiZ6K_cuJUn7Sb7vfQ" title="YouTube"
+            class="fa fa-youtube-play fa-lg" style="text-decoration: none;"></a>
+        <a href="https://scholar.google.com/citations?user=fVbjLj4AAAAJ&hl=en" title="Google Scholar"
+            class="fa fa-book fa-lg" style="text-decoration: none;"></a>
+
+        <br \>
+        <span class="text-muted">Pranabendra Prasad Chandra</span>
+    </div>
+</footer>
+</body>
+
+</html>
