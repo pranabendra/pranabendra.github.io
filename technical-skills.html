@@ -1,92 +1,55 @@
-<!doctype html>
-<html lang="en">
+<div id="base"></div>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+  </script>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Homepage of Pranabendra Prasad Chandra">
-    <meta property="og:description" content="Student, Electrical Engineering Department, Jadavpur University">
-    <meta name="author" content="Pranabendra Prasad Chandra">
+<script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  $(function () {
+    $("#base").load("base.html");
+  });
 
-    <title>Technical Skills</title>
-</head>
+  function waitForElement(id, callback) {
+    var poops = setInterval(function () {
+      if (document.getElementById(id)) {
+        clearInterval(poops);
+        callback();
+      }
+    }, 100);
+  }
 
-<body style="background-color:whitesmoke; font-family: 'Courier New', Courier, monospace; color: rgb(17, 170, 17);">
+  waitForElement("content-information", function () {
+    document.title = "Technical Skills";
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">PPC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resume">Resume</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container-fluid" style="height: 100%;">
-        <div class="row">
-            <div class="col-2 px-1 bg-dark position-fixed" id="fixed-sidebar" style="height: 100%;">
-                <table class="table table-hover">
-                    <tbody>
-                        <tr><td><a href="home.html" style="display: block; width: 100%; text-decoration: none; color:rgb(17, 170, 17);">Homepage</a></td></tr>
-                        <tr><td><a href="education.html" style="display: block; width: 100%; text-decoration: none; color:rgb(17, 170, 17);">Education</a></td></tr>
-                        <tr><td><a href="technical-skills.html" style="display: block; width: 100%; text-decoration: none; color:rgb(17, 170, 17);">Technical Skills</a></td></tr>
-                        <tr><td><a href="projects.html" style="display: block; width: 100%; text-decoration: none; color:rgb(17, 170, 17);">Projects</a></td></tr>
-                        <tr><td><a href="publications.html" style="display: block; width: 100%; text-decoration: none; color:rgb(17, 170, 17);">Publications</a></td></tr>
-                        <tr><td><a href="workshops.html" style="display: block; width: 100%; text-decoration: none; color:rgb(17, 170, 17);">Workshops</a></td></tr>
-                        <tr><td><a href="achievements.html" style="display: block; width: 100%; text-decoration: none; color:rgb(17, 170, 17);">Achievements</a></td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col offset-2" id="main">
-                <h1>Technical Skills</h1>
-                ...
-            </div>
-        </div>
+    document.getElementById("content-information").innerHTML = `
+    <h1>Technical Skills</h1>
+    <br \>
+    <div>
+        <ul>
+            <li>
+                <b>Programming Languages</b>: Python, C, C++, MATLAB, R, Arduino
+            </li><br \>
+            <li>
+                <b>Skills</b>: Machine Learning, Digital Signal Processing, Control Systems, Embedded Systems, Problem Solving
+            </li><br \>
+            <li>
+                <b>Web Frameworks</b>: Django, Angular
+            </li><br \>
+            <li>
+                <b>Tools (software)</b>: VS Code, Spyder, Jupyter Notebook, RStudio, MATLAB, AutoCAD, Proteus, NI Multisim, Simulink
+            </li><br \>
+            <li>
+                <b>Tools (hardware)</b>: Arduino, Raspberry Pi, ESP32, NodeMCU, 8085
+            </li><br \>
+            <li>
+                <b>Development Platform</b>: Ubuntu, Windows 10, Mac OS X
+            </li><br \>
+            <li>
+                <b>Hobbies</b>: Macro Photography, Electronics, Finance, Literature
+            </li><br \>
+        </ul>
     </div>
+    `;
+  });
 
-    <footer class="footer">
-        <div class="container"
-            style="height: 72px; position: absolute; bottom: 0; width: 100%; text-align: center; min-width: 100%; background-color: #343a40; padding-top: 10px;">
-            <a href="mailto:pranabendrachandra@gmail.com" title="Mail" class="fa fa-envelope-o fa-lg"
-                style="text-decoration: none;"></a>
-            <a href="https://www.github.com/pranabendra" title="Github" class="fa fa-github fa-lg"
-                style="text-decoration: none;"></a>
-            <a href="https://in.linkedin.com/in/pranabendra-prasad-chandra-20794a12b" title="LinkedIn"
-                class="fa fa-linkedin fa-lg" style="text-decoration: none;"></a>
-            <a href="https://www.instagram.com/pranab_ppc" title="Instagram" class="fa fa-instagram fa-lg"
-                style="text-decoration: none;"></a>
-            <a href="https://www.facebook.com/ppc.pranab" title="Facebook" class="fa fa-facebook fa-lg"
-                style="text-decoration: none;"></a>
-            <a href="#" title="Twitter" class="fa fa-twitter fa-lg" style="text-decoration: none;"></a>
-            <a href="https://500px.com/pranabendrachandra" title="500px" class="fa fa-500px fa-lg"
-                style="text-decoration: none;"></a>
-            <a href="https://www.youtube.com/channel/UC3a-ZFiZ6K_cuJUn7Sb7vfQ" title="YouTube"
-                class="fa fa-youtube-play fa-lg" style="text-decoration: none;"></a>
-            <a href="https://scholar.google.com/citations?user=fVbjLj4AAAAJ&hl=en" title="Google Scholar"
-                class="fa fa-book fa-lg" style="text-decoration: none;"></a>
-
-            <br \>
-            <span class="text-muted">Pranabendra Prasad Chandra</span>
-        </div>
-    </footer>
-
-</body>
+</script>

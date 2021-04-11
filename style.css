@@ -6,7 +6,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     background: whitesmoke;
-    color: #11aa11;
+    color: #000;
 }
 
 p {
@@ -14,7 +14,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #11aa11;
+    color: #000;
 }
 
 a,
@@ -176,7 +176,7 @@ a.article {
 #content {
     width: 100%;
     /* padding: 20px; */
-    min-height: 100vh;
+    min-height: 95vh;
     transition: all 0.3s;
 }
 
@@ -192,6 +192,23 @@ a.article {
 #content-information div ul li a:hover {
     color: darkblue;
 }
+
+#content-information table tbody tr td a {
+    color: blue;
+}
+
+#content-information table tbody tr td a:hover {
+    color: darkblue;
+}
+
+#content-information div ol li a {
+    color: blue;
+}
+
+#content-information div ol li a:hover {
+    color: darkblue;
+}
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
